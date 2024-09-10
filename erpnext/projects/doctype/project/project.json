@@ -3,7 +3,8 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "creation": "2023-08-27 13:17:31.627653",
+ "creation": "2024-09-10 14:17:02.887997",
+ "default_view": "List",
  "doctype": "DocType",
  "document_type": "Setup",
  "engine": "InnoDB",
@@ -687,10 +688,7 @@
    "label": "E Order Date"
   }
  ],
- "has_web_view": 1,
  "icon": "fa fa-puzzle-piece",
- "idx": 29,
- "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [
   {
@@ -698,13 +696,25 @@
    "link_fieldname": "project"
   }
  ],
- "modified": "2024-03-21 14:19:30.830704",
+ "modified": "2024-09-10 14:17:02.887997",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Project",
  "owner": "Administrator",
- "permissions": [],
- "route": "project",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "search_fields": "project_name,customer, status, priority, is_active",
  "show_name_in_global_search": 1,
  "sort_field": "modified",

@@ -6,7 +6,7 @@ import frappe
 from email_reply_parser import EmailReplyParser
 from frappe import _
 from frappe.desk.reportview import get_match_cond
-from frappe.website.website_generator import WebsiteGenerator
+from frappe.model.document import Document
 from frappe.utils import add_days, flt, get_datetime, get_time, get_url, nowtime, today
 
 from erpnext import get_default_company
@@ -14,7 +14,7 @@ from erpnext.controllers.queries import get_filters_cond
 from erpnext.setup.doctype.holiday_list.holiday_list import is_holiday
 from datetime import datetime
 
-class Project(WebsiteGenerator):
+class Project(Document):
 	def autoname(self):
 		now = datetime.now()
 		company = frappe.get_doc("Company", self.company)
