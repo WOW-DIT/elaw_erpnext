@@ -1,0 +1,21 @@
+{
+ "creation": "2020-07-20 20:17:15.870736",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Lead",
+ "dynamic_filters_json": "[[\"Lead\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Lead\",\"creation\",\"Timespan\",\"last month\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "\u0639\u0645\u064a\u0644 \u0645\u062d\u062a\u0645\u0644 \u062c\u062f\u064a\u062f (\u0622\u062e\u0631 \u0634\u0647\u0631)",
+ "modified": "2023-07-25 15:05:56.081916",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "New Lead (Last 1 Month)",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

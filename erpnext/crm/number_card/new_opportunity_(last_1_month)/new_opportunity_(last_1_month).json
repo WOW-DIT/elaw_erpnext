@@ -1,0 +1,21 @@
+{
+ "creation": "2020-07-20 20:17:15.897112",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Opportunity",
+ "dynamic_filters_json": "[[\"Opportunity\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Opportunity\",\"creation\",\"Timespan\",\"last month\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "\u0641\u0631\u0635\u0629 \u062c\u062f\u064a\u062f\u0629 (\u0622\u062e\u0631 \u0634\u0647\u0631)",
+ "modified": "2023-07-25 14:24:25.484214",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "New Opportunity (Last 1 Month)",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

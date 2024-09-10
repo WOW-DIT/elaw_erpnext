@@ -1,0 +1,740 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-08-27 13:17:31.627653",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_con_tab",
+  "company",
+  "section_break0",
+  "notes",
+  "section_break_18",
+  "actual_start_date",
+  "actual_time",
+  "column_break_20",
+  "actual_end_date",
+  "project_info_tab",
+  "project_name",
+  "status",
+  "service_type",
+  "project_type",
+  "is_active",
+  "percent_complete_method",
+  "percent_complete",
+  "column_break_5",
+  "project_template",
+  "expected_start_date",
+  "expected_end_date",
+  "priority",
+  "department",
+  "closed_report",
+  "experts_opt",
+  "legal_issues_details_section",
+  "service_class",
+  "service_subclass",
+  "case_type",
+  "court",
+  "customer_legal_capacity",
+  "file_no",
+  "column_break_pasd3",
+  "e_order_number",
+  "e_order_date",
+  "courthouse_number",
+  "court_case_number",
+  "legal_circle",
+  "police_complaint_no",
+  "case_number_in_the_public_prosecution",
+  "court_room_no",
+  "customer_details",
+  "customer",
+  "column_break_14",
+  "sales_order",
+  "pretender_section",
+  "pretender",
+  "respondent",
+  "experts_section",
+  "expert_management",
+  "room_number_for_experts",
+  "role_number_for_experts",
+  "column_break_e4qit",
+  "experts",
+  "legal_advice_details_section",
+  "counseling_type",
+  "other_details_section",
+  "sub_project_type",
+  "users_section",
+  "users",
+  "copied_from",
+  "project_details",
+  "estimated_costing",
+  "total_costing_amount",
+  "total_purchase_cost",
+  "column_break_28",
+  "total_sales_amount",
+  "total_billable_amount",
+  "total_billed_amount",
+  "total_consumed_material_cost",
+  "cost_center",
+  "margin",
+  "gross_margin",
+  "column_break_37",
+  "per_gross_margin",
+  "monitor_progress",
+  "collect_progress",
+  "holiday_list",
+  "frequency",
+  "from_time",
+  "to_time",
+  "first_email",
+  "second_email",
+  "daily_time_to_send",
+  "day_to_send",
+  "weekly_time_to_send",
+  "column_break_45",
+  "message",
+  "attachements_section",
+  "attachements",
+  "route",
+  "published"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_con_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project Con"
+  },
+  {
+   "fieldname": "project_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Project Info"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "oldfieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Open\nCompleted\nCancelled\nWin\nLoss",
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Project Type",
+   "oldfieldname": "project_type",
+   "oldfieldtype": "Data",
+   "options": "Project Type"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "label": "Is Active",
+   "oldfieldname": "is_active",
+   "oldfieldtype": "Select",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "Task Completion",
+   "fieldname": "percent_complete_method",
+   "fieldtype": "Select",
+   "label": "% Complete Method",
+   "options": "Manual\nTask Completion\nTask Progress\nTask Weight"
+  },
+  {
+   "bold": 1,
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "% Completed",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "project_template",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "From Template",
+   "options": "Project Template",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date",
+   "oldfieldname": "project_start_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected End Date",
+   "oldfieldname": "completion_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "oldfieldname": "priority",
+   "oldfieldtype": "Select",
+   "options": "Medium\nLow\nHigh"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "customer_details",
+   "fieldtype": "Tab Break",
+   "label": "Customer Details",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Customer",
+   "oldfieldname": "customer",
+   "oldfieldtype": "Link",
+   "options": "Customer",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "pretender_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pretender",
+   "fieldtype": "Table",
+   "label": "Pretender",
+   "options": "Pretender Table"
+  },
+  {
+   "fieldname": "respondent",
+   "fieldtype": "Table",
+   "label": "Respondent",
+   "options": "Opponent Table"
+  },
+  {
+   "depends_on": "eval:doc.service_type == '\u0642\u0636\u064a\u0629'",
+   "fieldname": "legal_issues_details_section",
+   "fieldtype": "Section Break",
+   "label": "Legal issues details"
+  },
+  {
+   "fieldname": "customer_legal_capacity",
+   "fieldtype": "Link",
+   "label": "Customer legal capacity",
+   "options": "Customers legal capacity"
+  },
+  {
+   "fieldname": "file_no",
+   "fieldtype": "Data",
+   "label": "File No"
+  },
+  {
+   "fieldname": "court",
+   "fieldtype": "Link",
+   "label": "Court",
+   "options": "Courts"
+  },
+  {
+   "fieldname": "court_case_number",
+   "fieldtype": "Data",
+   "label": "Court case number"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Link",
+   "label": "Case Type",
+   "options": "Cases Type"
+  },
+  {
+   "fieldname": "column_break_pasd3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "police_complaint_no",
+   "fieldtype": "Data",
+   "label": "Police complaint No"
+  },
+  {
+   "fieldname": "case_number_in_the_public_prosecution",
+   "fieldtype": "Data",
+   "label": "Case number in the Public Prosecution"
+  },
+  {
+   "fieldname": "courthouse_number",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Courthouse number"
+  },
+  {
+   "fieldname": "legal_circle",
+   "fieldtype": "Data",
+   "label": "Legal circle"
+  },
+  {
+   "fieldname": "court_room_no",
+   "fieldtype": "Data",
+   "label": "Court room No"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.experts_opt == 1 ",
+   "fieldname": "experts_section",
+   "fieldtype": "Tab Break",
+   "label": "Experts"
+  },
+  {
+   "fieldname": "expert_management",
+   "fieldtype": "Link",
+   "label": "Expert management",
+   "options": "Experts management"
+  },
+  {
+   "fieldname": "room_number_for_experts",
+   "fieldtype": "Data",
+   "label": "Room number for experts"
+  },
+  {
+   "fieldname": "role_number_for_experts",
+   "fieldtype": "Data",
+   "label": "Role number for experts"
+  },
+  {
+   "fieldname": "column_break_e4qit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "experts",
+   "fieldtype": "Table",
+   "label": "Experts",
+   "options": "Cases_Expert_Table"
+  },
+  {
+   "depends_on": "eval:doc.project_type == '\u0627\u0633\u062a\u0634\u0627\u0631\u0629'",
+   "fieldname": "legal_advice_details_section",
+   "fieldtype": "Tab Break",
+   "label": "Legal advice details"
+  },
+  {
+   "fieldname": "counseling_type",
+   "fieldtype": "Link",
+   "label": "Counseling type",
+   "options": "Counseling type"
+  },
+  {
+   "depends_on": "eval:doc.project_type == '\u0627\u062e\u0631\u0649'",
+   "fieldname": "other_details_section",
+   "fieldtype": "Tab Break",
+   "label": "Other details",
+   "mandatory_depends_on": "eval:doc.project_type == '\u0627\u062e\u0631\u0649'"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "users_section",
+   "fieldtype": "Tab Break",
+   "label": "Users"
+  },
+  {
+   "description": "Project will be accessible on the website to these users",
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Project User"
+  },
+  {
+   "fieldname": "copied_from",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Copied From",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break0",
+   "fieldtype": "Section Break",
+   "label": "Discerption",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-list"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Discerption",
+   "oldfieldname": "notes",
+   "oldfieldtype": "Text Editor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Start and End Dates"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date (via Time Sheet)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_time",
+   "fieldtype": "Float",
+   "label": "Actual Time (in Hours via Time Sheet)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date (via Time Sheet)",
+   "oldfieldname": "act_completion_date",
+   "oldfieldtype": "Date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "project_details",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Costing and Billing",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-money"
+  },
+  {
+   "fieldname": "estimated_costing",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost",
+   "oldfieldname": "project_value",
+   "oldfieldtype": "Currency",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_costing_amount",
+   "fieldtype": "Currency",
+   "label": "Total Costing Amount (via Timesheets)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_purchase_cost",
+   "fieldtype": "Currency",
+   "label": "Total Purchase Cost (via Purchase Invoice)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_sales_amount",
+   "fieldtype": "Currency",
+   "label": "Total Sales Amount (via Sales Order)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_billable_amount",
+   "fieldtype": "Currency",
+   "label": "Total Billable Amount (via Timesheets)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_billed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Billed Amount (via Sales Invoices)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_consumed_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Consumed Material Cost  (via Stock Entry)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "margin",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Margin",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "gross_margin",
+   "fieldtype": "Currency",
+   "label": "Gross Margin",
+   "oldfieldname": "gross_margin_value",
+   "oldfieldtype": "Currency",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "per_gross_margin",
+   "fieldtype": "Percent",
+   "label": "Gross Margin %",
+   "oldfieldname": "per_gross_margin",
+   "oldfieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "monitor_progress",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Monitor Progress"
+  },
+  {
+   "default": "0",
+   "fieldname": "collect_progress",
+   "fieldtype": "Check",
+   "label": "Collect Progress"
+  },
+  {
+   "depends_on": "collect_progress",
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List",
+   "options": "Holiday List"
+  },
+  {
+   "depends_on": "eval:doc.collect_progress == true",
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency To Collect Progress",
+   "options": "Hourly\nTwice Daily\nDaily\nWeekly"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Hourly\" && doc.collect_progress)",
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Hourly\" && doc.collect_progress)",
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Twice Daily\" && doc.collect_progress == true)\n\n",
+   "fieldname": "first_email",
+   "fieldtype": "Time",
+   "label": "First Email"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Twice Daily\" && doc.collect_progress == true)",
+   "fieldname": "second_email",
+   "fieldtype": "Time",
+   "label": "Second Email"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Daily\" && doc.collect_progress == true)",
+   "fieldname": "daily_time_to_send",
+   "fieldtype": "Time",
+   "label": "Daily Time to send"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Weekly\" && doc.collect_progress == true)",
+   "fieldname": "day_to_send",
+   "fieldtype": "Select",
+   "label": "Day to Send",
+   "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "depends_on": "eval:(doc.frequency == \"Weekly\" && doc.collect_progress == true)",
+   "fieldname": "weekly_time_to_send",
+   "fieldtype": "Time",
+   "label": "Weekly Time to send"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "collect_progress",
+   "description": "Message will be sent to the users to get their status on the Project",
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message",
+   "mandatory_depends_on": "collect_progress"
+  },
+  {
+   "fieldname": "attachements_section",
+   "fieldtype": "Tab Break",
+   "label": "Attachements"
+  },
+  {
+   "fieldname": "attachements",
+   "fieldtype": "Table",
+   "label": "Attachements",
+   "options": "LawAttachementTable"
+  },
+  {
+   "fieldname": "sub_project_type",
+   "fieldtype": "Link",
+   "label": "Sub Project Type",
+   "options": "Sub_Project_Type_T"
+  },
+  {
+   "fieldname": "closed_report",
+   "fieldtype": "Text",
+   "label": "Closed Report"
+  },
+  {
+   "default": "0",
+   "fieldname": "experts_opt",
+   "fieldtype": "Check",
+   "label": "Experts"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Route"
+  },
+  {
+   "fieldname": "published",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Published"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Type"
+  },
+  {
+   "fieldname": "service_class",
+   "fieldtype": "Link",
+   "label": "Service Class",
+   "options": "Service Class"
+  },
+  {
+   "fieldname": "service_subclass",
+   "fieldtype": "Link",
+   "label": "Service Subclass",
+   "options": "Service Subclass"
+  },
+  {
+   "fieldname": "e_order_number",
+   "fieldtype": "Data",
+   "label": "E Order Number"
+  },
+  {
+   "fieldname": "e_order_date",
+   "fieldtype": "Date",
+   "label": "E Order Date"
+  }
+ ],
+ "has_web_view": 1,
+ "icon": "fa fa-puzzle-piece",
+ "idx": 29,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "links": [
+  {
+   "link_doctype": "General Appointment",
+   "link_fieldname": "project"
+  }
+ ],
+ "modified": "2024-03-21 14:19:30.830704",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Project",
+ "owner": "Administrator",
+ "permissions": [],
+ "route": "project",
+ "search_fields": "project_name,customer, status, priority, is_active",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Purple",
+   "title": "Open"
+  },
+  {
+   "color": "Green",
+   "title": "Win"
+  },
+  {
+   "color": "Red",
+   "title": "Loss"
+  },
+  {
+   "color": "Yellow",
+   "title": "Cancelled"
+  },
+  {
+   "color": "Blue",
+   "title": "Completed"
+  }
+ ],
+ "timeline_field": "customer",
+ "title_field": "project_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1,
+ "translated_doctype": 1
+}
