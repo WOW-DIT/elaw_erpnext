@@ -1927,10 +1927,12 @@ def get_list_context(context=None):
 
 @frappe.whitelist()
 def get_bank_cash_account(mode_of_payment, company):
+	# frappe.throw(f"{mode_of_payment} ::: {company}")
 	account = frappe.db.get_value(
 		"Mode of Payment Account", {"parent": mode_of_payment, "company": company}, "default_account"
 	)
-	if not account:
+	
+	if account is None:
 		frappe.throw(
 			_("Please set default Cash or Bank account in Mode of Payment {0}").format(
 				get_link_to_form("Mode of Payment", mode_of_payment)

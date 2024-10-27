@@ -15,6 +15,8 @@ frappe.ui.form.on('Fiscal Year', {
 		} else {
 			frm.set_intro("");
 		}
+
+		filter_companies(frm);
 	},
 	set_as_default: function(frm) {
 		return frm.call('set_as_default');
@@ -27,3 +29,16 @@ frappe.ui.form.on('Fiscal Year', {
 		}
 	},
 });
+
+async function filter_companies(frm) {
+	let user = await frappe.db.get_doc("User", frappe.session.user);
+	if(user.name !== "Administrator" && user.companies.length > 0) {
+		frm.fields_dict['companies'].grid.get_field("company").get_query = function(doc, cdt, cdn) {
+			return {
+				filters: {
+					"name": user.companies[0].company
+				}
+			}
+		}
+	} 
+}

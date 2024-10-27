@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -9,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "company",
   "full_name",
   "status",
   "transporter",
@@ -115,14 +117,23 @@
    "fieldtype": "Link",
    "label": "Address",
    "options": "Address"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-user",
- "modified": "2022-06-28 10:29:14.151380",
+ "links": [],
+ "modified": "2024-10-06 15:38:24.187478",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Driver",
  "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -164,6 +175,7 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "full_name",
  "track_changes": 1
 }

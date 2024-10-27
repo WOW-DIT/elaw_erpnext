@@ -9,9 +9,9 @@
  "engine": "InnoDB",
  "field_order": [
   "asset_category_name",
+  "comapny",
   "column_break_3",
   "private",
-  "comapny",
   "depreciation_options",
   "enable_cwip_accounting",
   "finance_book_detail",
@@ -77,12 +77,12 @@
    "fieldname": "comapny",
    "fieldtype": "Link",
    "label": "Comapny",
-   "mandatory_depends_on": "eval:doc.private === 1",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "links": [],
- "modified": "2024-05-16 14:25:10.700637",
+ "modified": "2024-10-09 12:39:30.031407",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Asset Category",

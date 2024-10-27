@@ -94,11 +94,12 @@ class FiscalYear(Document):
 				or (%(year_end_date)s between year_start_date and year_end_date)
 				or (year_start_date between %(year_start_date)s and %(year_end_date)s)
 				or (year_end_date between %(year_start_date)s and %(year_end_date)s)
-			) and name!=%(name)s""",
+			) and name!=%(name)s and company=%(company)s""",
 			{
 				"year_start_date": self.year_start_date,
 				"year_end_date": self.year_end_date,
 				"name": self.name or "No Name",
+				"company": self.company,
 			},
 			as_dict=True,
 		)
@@ -131,8 +132,8 @@ class FiscalYear(Document):
 @frappe.whitelist()
 def check_duplicate_fiscal_year(doc):
 	year_start_end_dates = frappe.db.sql(
-		"""select name, year_start_date, year_end_date from `tabFiscal Year` where name!=%s""",
-		(doc.name),
+		"""select name, year_start_date, year_end_date from `tabFiscal Year` where name!=%s and company=%s""",
+		(doc.name, doc.company),
 	)
 	for fiscal_year, ysd, yed in year_start_end_dates:
 		if (getdate(doc.year_start_date) == ysd and getdate(doc.year_end_date) == yed) and (
